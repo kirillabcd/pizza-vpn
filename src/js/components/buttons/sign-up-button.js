@@ -1,4 +1,4 @@
-import { createNewUser } from '../functions/create-new-user.js'
+import { createNewUser } from '../../functions/create-new-user.js'
 
 export const signUpButton = document.createElement('button')
 signUpButton.className = 'sign-up-button button-primary'

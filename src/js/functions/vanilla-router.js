@@ -6,18 +6,20 @@ import { userProfile } from '../screens/profile.js'
 const app = document.querySelector('.app')
 
 const routes = {
-    '/': { render: () => welcome() },
-    '/sign-up': { render: () => signUp() },
-    '/sign-in': { render: () => signIn() },
-    '/profile': { render: () => userProfile() },
+    '/': { render: welcome },
+    '/sign-up': { render: signUp },
+    '/sign-in': { render: signIn },
+    '/profile': { render: userProfile },
 }
 
-export function router() {
-    let view = routes[location.pathname]
+export async function router() {
+    const path = location.pathname
+    const view = routes[path]
 
     if (view) {
         app.replaceChildren()
-        app.append(view.render())
+        const renderedView = await view.render()
+        app.append(renderedView)
     } else {
         history.replaceState('', '', '/')
         router()

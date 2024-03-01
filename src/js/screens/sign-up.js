@@ -1,7 +1,7 @@
-import { signUpButton } from '../components/sign-up-button.js'
-import { emailInputWrapper } from '../components/email-input.js'
-import { passwordInputWrapper } from '../components/password-input.js'
-import { createLinkButton } from '../components/link-button.js'
+import { signUpButton } from '../components/buttons/sign-up-button.js'
+import { emailInputWrapper } from '../components/inputs/email-input.js'
+import { passwordInputWrapper } from '../components/inputs/password-input.js'
+import { createLinkButton } from '../components/buttons/link-button.js'
 
 export const signUp = () => {
     const signUpSection = document.createElement('section')

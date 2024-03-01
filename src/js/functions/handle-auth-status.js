@@ -1,6 +1,6 @@
 import { auth } from '../firebase/auth-firebase'
 import { onAuthStateChanged } from 'firebase/auth'
-import { directRouter } from './vanilla-router'
+import { router, directRouter } from './vanilla-router'
 
 export const handleAuthStatus = () => {
     onAuthStateChanged(auth(), (user) => {
@@ -8,7 +8,7 @@ export const handleAuthStatus = () => {
             directRouter('profile')
             console.log(user)
         } else {
-            directRouter('welcome')
+            router()
         }
     })
 }

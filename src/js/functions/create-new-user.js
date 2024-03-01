@@ -2,8 +2,8 @@ import { auth } from '../firebase/auth-firebase.js'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { db } from '../firebase/firestore.js'
 import { doc, setDoc } from 'firebase/firestore'
-import { emailInput, emailInputError } from '../components/email-input.js'
-import { passwordInput, passwordInputError } from '../components/password-input.js'
+import { emailInput, emailInputError } from '../components/inputs/email-input.js'
+import { passwordInput, passwordInputError } from '../components/inputs/password-input.js'
 
 const createNewUserDb = async () => {
     const user = auth().currentUser

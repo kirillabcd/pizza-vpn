@@ -1,13 +1,13 @@
-import { directRouter } from '../functions/vanilla-router'
+import { resetPassword } from '../../functions/reset-password'
 
-export const createLinkButton = (text, route) => {
+export const resetPasswordButton = () => {
     const linkButton = document.createElement('a')
     linkButton.className = 'link-button'
-    linkButton.textContent = text
+    linkButton.textContent = 'Reset password'
 
     linkButton.addEventListener('click', (event) => {
         event.preventDefault
-        directRouter(route)
+        resetPassword()
     })
 
     return linkButton

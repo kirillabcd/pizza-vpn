@@ -10,7 +10,7 @@
 @import './components/buttons/button-primary';
 @import './components/buttons/button-secondary';
 @import './components/buttons/link-button';
-
+@import './components/buttons/small-button';
 @import './components/buttons/sign-buttons-wrapper';
 
 // > titles
@@ -21,4 +21,5 @@
 
 // > screens
 @import './screens/welcome.scss';
-@import './screens/sign-up.scss';
+@import './screens/sign.scss';
+@import './screens/profile.scss';

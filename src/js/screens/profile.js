@@ -1,6 +1,6 @@
 import { getUser } from '../functions/get-user'
-import { signOut } from 'firebase/auth'
-import { auth } from '../firebase/auth-firebase'
+import { signOutUser } from '../functions/sign-out'
+import { directRouter } from '../functions/vanilla-router'
 
 export const userProfile = () => {
     const profileSection = document.createElement('section')
@@ -11,9 +11,8 @@ export const userProfile = () => {
 
     // temp
     email.addEventListener('click', () => {
-        signOut(auth()).then(() => {
-            console.log('logged out')
-        })
+        signOutUser()
+        directRouter('welcome')
     })
 
     profileSection.append(email)

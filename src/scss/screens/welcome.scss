@@ -9,50 +9,20 @@
 }
 
 .welcome-pizza {
-    width: clamp(100px, 70vw, 350px);
-    height: clamp(100px, 40vh, 350px);
-
-    background-image: url('/images/welcome-pizza.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.twinkle-container {
     position: relative;
-}
 
-.twinkle-element {
-    position: absolute;
+    width: clamp(350px, 70vw, 650px);
+    height: clamp(450px, 60dvh, 650px);
 
-    background-image: url('/images/twinkle.svg');
+    @media screen and (max-width: 425px) {
+        width: clamp(100px, 70vw, 350px);
+        height: clamp(100px, 50dvh, 350px);
+    }
+
+    background-image: url('/images/welcome-pizza2.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-
-    animation: twinkle 5s ease-in infinite;
-
-    &:nth-child(1) {
-        left: 0;
-
-        width: 30px;
-        height: 30px;
-    }
-
-    &:nth-child(2) {
-        left: 45%;
-        top: -60px;
-
-        width: 50px;
-        height: 50px;
-    }
-
-    &:nth-child(3) {
-        right: 0;
-
-        width: 30px;
-        height: 30px;
-    }
 }
 
 .welcome-buttons-wrapper {

@@ -1,0 +1,27 @@
+.button-secondary {
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+
+    font-family: $main-font;
+    font-weight: 600;
+    font-size: 24px;
+
+    border: 3px solid $black-color;
+    box-shadow: $black-color 5px 5px 0px;
+
+    @extend %interactive-transition;
+
+    cursor: pointer;
+
+    @media (hover: hover) {
+        &:hover {
+            transform: scale(1.03);
+            box-shadow: $black-color 6px 6px 0px;
+        }
+    }
+
+    &:active {
+        box-shadow: $black-color 3px 3px 0px;
+        transform: scale(1);
+    }
+}

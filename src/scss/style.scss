@@ -1,0 +1,24 @@
+@import 'normalize.css';
+@import './commons/fonts';
+@import './commons/varaibles';
+@import './commons/keyframes';
+@import './commons/placeholders';
+
+@import './components/app-body';
+
+// > buttons
+@import './components/buttons/button-primary';
+@import './components/buttons/button-secondary';
+@import './components/buttons/link-button';
+
+@import './components/buttons/sign-buttons-wrapper';
+
+// > titles
+@import './components/title';
+
+// > inputs
+@import './components/inputs/sign-input';
+
+// > screens
+@import './screens/welcome.scss';
+@import './screens/sign-up.scss';

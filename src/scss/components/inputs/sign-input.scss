@@ -1,0 +1,76 @@
+.sign-input-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .sign-input {
+        padding: 10px 20px 10px 20px;
+        border-radius: 10px;
+        font-size: 24px;
+        font-family: $main-font;
+        outline: none;
+        border: 3px solid $black-color;
+        box-shadow: $black-color 5px 5px 0px;
+        cursor: pointer;
+
+        @extend %interactive-transition;
+
+        @media (hover: hover) {
+            &:hover {
+                transform: scale(1.03);
+                box-shadow: $black-color 6px 6px 0px;
+
+                ~ label {
+                    transform: scale(1.07);
+                }
+            }
+        }
+
+        &:focus {
+            box-shadow: $black-color 3px 3px 0px;
+            transform: scale(1.03);
+
+            ~ label {
+                transform: translateY(-170%);
+                font-size: 19px;
+            }
+        }
+
+        &:valid {
+            background-color: $yellow-green;
+
+            ~ label {
+                transform: translateY(-170%);
+                font-size: 19px;
+            }
+        }
+
+        &:not(:placeholder-shown) {
+            ~ label {
+                transform: translateY(-170%);
+                font-size: 18px;
+            }
+        }
+    }
+
+    label {
+        position: absolute;
+        left: 20px;
+        top: 15px;
+        font-family: $main-font;
+        pointer-events: none;
+        font-size: 24px;
+
+        @extend %interactive-transition;
+    }
+
+    .input-error {
+        font-family: $main-font;
+        padding: 10px 0 0 20px;
+        visibility: hidden;
+    }
+
+    .password-input {
+        letter-spacing: 10px;
+    }
+}

@@ -1,0 +1,64 @@
+.welcome {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.welcome-pizza {
+    width: clamp(200px, 50vw, 350px);
+    height: clamp(200px, 80vh, 350px);
+
+    background-image: url('/images/welcome-pizza.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.twinkle-container {
+    position: relative;
+}
+
+.twinkle-element {
+    position: absolute;
+
+    background-image: url('/images/twinkle.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    animation: twinkle 5s ease-in infinite;
+
+    &:nth-child(1) {
+        left: 0;
+
+        width: 30px;
+        height: 30px;
+    }
+
+    &:nth-child(2) {
+        left: 45%;
+        top: -80px;
+
+        width: 50px;
+        height: 50px;
+    }
+
+    &:nth-child(3) {
+        right: 0;
+
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.welcome-buttons-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}

@@ -6,7 +6,6 @@ export const handleAuthStatus = () => {
     onAuthStateChanged(auth(), (user) => {
         if (user) {
             directRouter('profile')
-            console.log(user)
         } else {
             router()
         }

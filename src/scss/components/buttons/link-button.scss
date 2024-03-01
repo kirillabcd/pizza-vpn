@@ -1,6 +1,7 @@
 .link-button {
     font-family: $main-font;
-    text-decoration: underline dotted;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
     color: $black-color;
 
     text-align: center;

@@ -1,6 +1,10 @@
+// ----> COMPONENTS
+import { uidButton } from '../components/buttons/uid-copy-button'
+import { logOutButton } from '../components/buttons/log-out-button'
+import { subscribeButton } from '../components/buttons/subscribe-button'
+
+// ----> FUNCTIONS
 import { getUser } from '../functions/get-user'
-import { signOutUser } from '../functions/sign-out-user'
-import { directRouter } from '../functions/vanilla-router'
 import { readUserData } from '../firebase/read-firestore-db-data'
 
 export const userProfile = async () => {
@@ -8,30 +12,21 @@ export const userProfile = async () => {
     const data = await readUserData()
 
     const profileSection = document.createElement('section')
-    profileSection.className = 'profile'
+    profileSection.className = 'section'
 
     const email = document.createElement('h2')
-    email.textContent = user.email
-    email.className = 'title'
+    email.textContent = `Welcome, ${user.email}`
+    email.className = 'user-email'
 
-    const id = document.createElement('h2')
-    id.textContent = user.uid
-    id.className = 'title'
+    const newUidButton = uidButton
+    const newLogOutButton = logOutButton
 
-    // temp
-    email.addEventListener('click', () => {
-        signOutUser()
-        directRouter('welcome')
-    })
-
-    profileSection.append(email, id)
+    profileSection.append(email, newUidButton, newLogOutButton)
 
     if ((data.subscriber = 'false')) {
-        const subscriber = document.createElement('h2')
-        subscriber.textContent = 'You are not subscribed yet'
-        subscriber.className = 'title'
+        const newSubscribeButton = subscribeButton
 
-        profileSection.append(subscriber)
+        profileSection.append(newSubscribeButton)
     }
 
     return profileSection

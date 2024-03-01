@@ -1,6 +1,6 @@
 import { sendPasswordResetEmail } from 'firebase/auth'
 import { auth } from '../firebase/auth-firebase'
-import { emailInput, emailInputError } from '../components/email-input'
+import { emailInput, emailInputError } from '../components/inputs/email-input'
 
 export const resetPassword = () => {
     const email = emailInput.value

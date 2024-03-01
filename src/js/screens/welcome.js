@@ -1,5 +1,5 @@
-import { welcomeButtonSignUp } from '../components/welcome-button-sign-up.js'
-import { welcomeButtonSignIn } from '../components/welcome-button-sign-in.js'
+import { welcomeButtonSignUp } from '../components/buttons/welcome-button-sign-up.js'
+import { welcomeButtonSignIn } from '../components/buttons/welcome-button-sign-in.js'
 
 export const welcome = () => {
     const welcomeSection = document.createElement('section')

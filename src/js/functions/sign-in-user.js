@@ -1,7 +1,7 @@
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../firebase/auth-firebase.js'
-import { emailInput, emailInputError } from '../components/email-input.js'
-import { passwordInput, passwordInputError } from '../components/password-input.js'
+import { emailInput, emailInputError } from '../components/inputs/email-input.js'
+import { passwordInput, passwordInputError } from '../components/inputs/password-input.js'
 
 export const signInUser = () => {
     const emailValue = document.querySelector('.email-input').value

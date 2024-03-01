@@ -1,5 +1,5 @@
 import { getUser } from '../functions/get-user'
-import { signOutUser } from '../functions/sign-out'
+import { signOutUser } from '../functions/sign-out-user'
 import { directRouter } from '../functions/vanilla-router'
 
 export const userProfile = () => {

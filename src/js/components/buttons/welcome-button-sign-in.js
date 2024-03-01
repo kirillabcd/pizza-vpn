@@ -1,4 +1,4 @@
-import { directRouter } from '../functions/vanilla-router'
+import { directRouter } from '../../functions/vanilla-router'
 
 export const welcomeButtonSignIn = document.createElement('button')
 welcomeButtonSignIn.className = 'button-secondary'

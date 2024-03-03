@@ -1,0 +1,31 @@
+.uid-button {
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    padding: 5px 10px 5px 10px;
+
+    border: 2px solid $black-color;
+    border-radius: 10px;
+
+    .uid-icon {
+        width: 20px;
+        height: 20px;
+
+        background-image: url('/images/uid.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .uid-text {
+        margin: 0;
+        font-family: $main-font;
+        line-height: 1;
+    }
+}

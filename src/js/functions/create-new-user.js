@@ -41,7 +41,6 @@ export const createNewUser = () => {
         createUserWithEmailAndPassword(auth(), emailValue, passwordValue)
             .then((userCredential) => {
                 const user = userCredential.user
-                console.log(user)
                 createNewUserDb()
             })
             .catch((error) => {

@@ -1,0 +1,25 @@
+.profile-item {
+    position: relative;
+    padding: 20px 0 20px 0;
+    font-family: $main-font;
+    line-height: 1;
+    border-bottom: 1px solid $black-color;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        width: 20px;
+        height: 20px;
+
+        background-image: url('/images/arrow.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

@@ -10,8 +10,13 @@
 @import './components/buttons/button-primary';
 @import './components/buttons/button-secondary';
 @import './components/buttons/link-button';
+@import './components/buttons/uid-button';
+@import './components/buttons/log-out-button';
 @import './components/buttons/small-button';
 @import './components/buttons/sign-buttons-wrapper';
+
+// > profile-items
+@import './components/profile-items/profile-item';
 
 // > titles
 @import './components/title';

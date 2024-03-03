@@ -1,4 +1,27 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.user-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-pic {
+    width: 80px;
+    height: 80px;
+
+    background-image: url(/images/tongue.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .user-email {
-    font-family: $main-font;
     margin: 0;
+    font-family: $main-font;
 }

@@ -13,6 +13,8 @@
 
     @extend %interactive-transition;
 
+    user-select: none;
+
     cursor: pointer;
 
     @media (hover: hover) {

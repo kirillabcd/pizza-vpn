@@ -10,7 +10,7 @@ export const signIn = () => {
 
     const title = document.createElement('h2')
     title.className = 'title sign-in-title'
-    title.textContent = 'Log in'
+    title.textContent = 'Войти'
 
     const form = document.createElement('form')
     form.action = 'submit'
@@ -26,7 +26,7 @@ export const signIn = () => {
     const newSignInButton = signInButton
 
     // ----> LINK BUTTONS
-    const newLinkButton = createLinkButton('Sign up', 'sign-up')
+    const newLinkButton = createLinkButton('Зарегистрироваться', 'sign-up')
     const newResetPasswordButton = resetPasswordButton()
 
     // ----> BUTTONS WRAPPER

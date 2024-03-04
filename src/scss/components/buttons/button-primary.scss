@@ -1,4 +1,6 @@
 .button-primary {
+    position: relative;
+
     padding: 10px 20px 10px 20px;
     border-radius: 10px;
 
@@ -12,6 +14,52 @@
     border: 3px solid $black-color;
     box-shadow: $black-color 5px 5px 0px;
 
+    user-select: none;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: -25px;
+        top: -5px;
+
+        width: 15px;
+        height: 15px;
+
+        rotate: -20deg;
+
+        z-index: 2;
+
+        transform: scale(0);
+
+        background-image: url('/images/heart-fill.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        transition: 0.5s ease;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: -27px;
+        top: 45px;
+
+        width: 15px;
+        height: 15px;
+
+        rotate: 20deg;
+
+        transform: scale(0);
+
+        background-image: url('/images/heart-fill.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        transition: 0.5s ease;
+    }
+
     @extend %interactive-transition;
 
     cursor: pointer;
@@ -20,6 +68,16 @@
         &:hover {
             transform: scale(1.03);
             box-shadow: $black-color 6px 6px 0px;
+
+            @media screen and (min-width: 768px) {
+                &::before {
+                    transform: scale(1);
+                }
+
+                &:after {
+                    transform: scale(1);
+                }
+            }
         }
     }
 

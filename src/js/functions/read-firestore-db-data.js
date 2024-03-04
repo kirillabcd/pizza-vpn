@@ -1,6 +1,6 @@
-import { db } from './firestore'
+import { db } from '../firebase/firestore'
 import { doc, getDoc } from 'firebase/firestore'
-import { getUser } from '../functions/get-user'
+import { getUser } from './get-user'
 
 export const readUserData = async () => {
     const user = getUser()

@@ -11,11 +11,11 @@
 .welcome-pizza {
     position: relative;
 
-    width: clamp(350px, 70vw, 650px);
-    height: clamp(450px, 60dvh, 650px);
+    width: clamp(350px, 70vw, 500px);
+    height: clamp(450px, 60dvh, 500px);
 
     @media screen and (max-width: 425px) {
-        width: clamp(100px, 70vw, 350px);
+        width: clamp(100px, 85vw, 350px);
         height: clamp(100px, 50dvh, 350px);
     }
 
@@ -23,6 +23,44 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+
+    @media screen and (min-width: 768px) {
+        &::before {
+            content: '';
+
+            position: absolute;
+
+            background-image: url('/images/twinkle.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            top: 160px;
+            left: 100px;
+            width: 20px;
+            height: 20px;
+
+            animation: twinkle 5s ease-in infinite;
+        }
+
+        &::after {
+            content: '';
+
+            position: absolute;
+
+            background-image: url('/images/twinkle.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            top: 280px;
+            right: 115px;
+            width: 20px;
+            height: 20px;
+
+            animation: twinkle 5s ease-in infinite;
+        }
+    }
 }
 
 .welcome-buttons-wrapper {
@@ -30,5 +68,5 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }

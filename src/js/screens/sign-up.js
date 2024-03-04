@@ -9,7 +9,7 @@ export const signUp = () => {
 
     const title = document.createElement('h2')
     title.className = 'title sign-up-title'
-    title.textContent = 'Register'
+    title.textContent = 'Регистрация'
 
     const form = document.createElement('form')
     form.action = 'submit'
@@ -25,7 +25,7 @@ export const signUp = () => {
     const newSignUpButton = signUpButton
 
     // ----> LINK BUTTON
-    const newLinkButton = createLinkButton('Sign in', 'sign-in')
+    const newLinkButton = createLinkButton('Войти', 'sign-in')
 
     // ----> BUTTONS WRAPPER
     const buttonsWrapper = document.createElement('div')

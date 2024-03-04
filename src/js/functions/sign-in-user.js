@@ -1,23 +1,11 @@
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../firebase/auth-firebase.js'
-import { emailInput, emailInputError } from '../components/inputs/email-input.js'
-import { passwordInput, passwordInputError } from '../components/inputs/password-input.js'
+import { emailInput } from '../components/inputs/email-input.js'
+import { passwordInput } from '../components/inputs/password-input.js'
 
 export const signInUser = () => {
     const emailValue = document.querySelector('.email-input').value
     const passwordValue = document.querySelector('.password-input').value
-
-    if (!emailInput.validity.valid) {
-        emailInputError.style.visibility = 'visible'
-    } else {
-        emailInputError.style.visibility = 'hidden'
-    }
-
-    if (!passwordInput.validity.valid) {
-        passwordInputError.style.visibility = 'visible'
-    } else {
-        passwordInputError.style.visibility = 'hidden'
-    }
 
     if (emailInput.validity.valid && passwordInput.validity.valid) {
         signInWithEmailAndPassword(auth(), emailValue, passwordValue)
@@ -28,7 +16,27 @@ export const signInUser = () => {
                 const errorCode = error.code
                 const errorMessage = error.message
             })
-    } else {
-        console.log('not valid')
+    }
+
+    if (!emailInput.validity.valid) {
+        emailInput.classList.add('shake')
+
+        const emailAnimationEndHandler = () => {
+            emailInput.classList.remove('shake')
+            emailInput.removeEventListener('animationend', emailAnimationEndHandler)
+        }
+
+        emailInput.addEventListener('animationend', emailAnimationEndHandler)
+    }
+
+    if (!passwordInput.validity.valid) {
+        passwordInput.classList.add('shake')
+
+        const passwordAnimationEndHandler = () => {
+            passwordInput.classList.remove('shake')
+            passwordInput.removeEventListener('animationend', passwordAnimationEndHandler)
+        }
+
+        passwordInput.addEventListener('animationend', passwordAnimationEndHandler)
     }
 }

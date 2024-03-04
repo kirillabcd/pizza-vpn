@@ -4,13 +4,16 @@
     flex-direction: column;
 
     .sign-input {
-        padding: 10px 20px 10px 20px;
+        position: relative;
+        padding: 10px 40px 10px 20px;
         border-radius: 10px;
-        font-size: 24px;
+        font-size: 22px;
+        line-height: 1;
         font-family: $main-font;
         outline: none;
         border: 3px solid $black-color;
         box-shadow: $black-color 5px 5px 0px;
+
         cursor: pointer;
 
         @extend %interactive-transition;
@@ -29,15 +32,6 @@
         &:focus {
             box-shadow: $black-color 3px 3px 0px;
             transform: scale(1.03);
-
-            ~ label {
-                transform: translateY(-170%);
-                font-size: 19px;
-            }
-        }
-
-        &:valid {
-            background-color: $yellow-green;
 
             ~ label {
                 transform: translateY(-170%);
@@ -64,10 +58,43 @@
         @extend %interactive-transition;
     }
 
-    .input-error {
-        font-family: $main-font;
-        padding: 10px 0 0 20px;
-        visibility: hidden;
+    .input-banner {
+        position: absolute;
+        right: 15px;
+        top: 16px;
+
+        width: 20px;
+        height: 20px;
+
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        transform: scale(0);
+
+        transition: 0.2s ease;
+    }
+
+    .valid {
+        color: $black-color;
+
+        ~ .input-banner {
+            background-image: url('/images/check.svg');
+            transform: scale(1);
+        }
+    }
+
+    .not-valid {
+        background-color: white;
+
+        ~ .input-banner {
+            background-image: url('/images/x.svg');
+            transform: scale(1);
+        }
+    }
+
+    .shake {
+        animation: shake 0.5s ease;
     }
 
     .password-input {

@@ -1,3 +1,5 @@
+import { validatePassword } from '../../functions/validate-password'
+
 export const passwordInputWrapper = document.createElement('div')
 passwordInputWrapper.className = 'sign-input-wrapper password-input-wrapper'
 
@@ -15,8 +17,11 @@ passwordInputLabel.htmlFor = 'password-input'
 passwordInputLabel.textContent = 'Password'
 passwordInputLabel.className = 'password-input-label'
 
-export const passwordInputError = document.createElement('span')
-passwordInputError.textContent = 'Password should be at least 6 characters'
-passwordInputError.className = 'input-error password-input-error'
+const passwordInputBanner = document.createElement('span')
+passwordInputBanner.className = 'input-banner'
 
-passwordInputWrapper.append(passwordInput, passwordInputLabel, passwordInputError)
+passwordInputWrapper.append(passwordInput, passwordInputLabel, passwordInputBanner)
+
+passwordInput.addEventListener('input', () => {
+    validatePassword()
+})

@@ -15,7 +15,7 @@
     height: clamp(450px, 60dvh, 500px);
 
     @media screen and (max-width: 425px) {
-        width: clamp(100px, 70vw, 350px);
+        width: clamp(100px, 85vw, 350px);
         height: clamp(100px, 50dvh, 350px);
     }
 
@@ -35,8 +35,8 @@
             background-repeat: no-repeat;
             background-position: center;
 
-            top: 170px;
-            left: 90px;
+            top: 160px;
+            left: 100px;
             width: 20px;
             height: 20px;
 

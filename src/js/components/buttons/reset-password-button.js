@@ -1,14 +1,10 @@
 import { resetPassword } from '../../functions/reset-password'
 
-export const resetPasswordButton = () => {
-    const linkButton = document.createElement('a')
-    linkButton.className = 'link-button'
-    linkButton.textContent = 'Сбросить пароль'
+export const resetPasswordButton = document.createElement('button')
+resetPasswordButton.className = 'reset-password-button button-primary'
+resetPasswordButton.textContent = 'Отправить'
 
-    linkButton.addEventListener('click', (event) => {
-        event.preventDefault
-        resetPassword()
-    })
-
-    return linkButton
-}
+resetPasswordButton.addEventListener('click', (event) => {
+    event.preventDefault()
+    resetPassword()
+})

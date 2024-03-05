@@ -27,10 +27,7 @@
 }
 
 .profile-items-container {
-    display: flex;
-    max-width: 400px;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
 }

@@ -1,6 +1,7 @@
 import { welcome } from '../screens/welcome.js'
 import { signUp } from '../screens/sign-up.js'
 import { signIn } from '../screens/sign-in.js'
+import { resetPassword } from '../screens/reset.js'
 import { userProfile } from '../screens/profile.js'
 
 const app = document.querySelector('.app')
@@ -9,6 +10,7 @@ const routes = {
     '/': { render: welcome },
     '/sign-up': { render: signUp },
     '/sign-in': { render: signIn },
+    '/reset': { render: resetPassword },
     '/profile': { render: userProfile },
 }
 

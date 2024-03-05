@@ -1,18 +1,21 @@
 .sign-input-wrapper {
     position: relative;
-    display: flex;
-    flex-direction: column;
+    width: 290px;
 
     .sign-input {
-        position: relative;
+        box-sizing: border-box;
+        display: block;
         padding: 10px 40px 10px 20px;
+        border: 3px solid $black-color;
+        width: 100%;
+        box-shadow: $black-color 5px 5px 0px;
         border-radius: 10px;
+
+        font-family: $main-font;
         font-size: 22px;
         line-height: 1;
-        font-family: $main-font;
+
         outline: none;
-        border: 3px solid $black-color;
-        box-shadow: $black-color 5px 5px 0px;
 
         cursor: pointer;
 
@@ -30,12 +33,12 @@
         }
 
         &:focus {
-            box-shadow: $black-color 3px 3px 0px;
             transform: scale(1.03);
+            box-shadow: $black-color 3px 3px 0px;
 
             ~ label {
                 transform: translateY(-170%);
-                font-size: 19px;
+                font-size: 18px;
             }
         }
 
@@ -49,17 +52,21 @@
 
     label {
         position: absolute;
+
         left: 20px;
         top: 15px;
+
         font-family: $main-font;
-        pointer-events: none;
         font-size: 24px;
+
+        pointer-events: none;
 
         @extend %interactive-transition;
     }
 
     .input-banner {
         position: absolute;
+
         right: 15px;
         top: 16px;
 
@@ -71,12 +78,11 @@
         background-position: center;
 
         transform: scale(0);
-
-        transition: 0.2s ease;
     }
 
     .valid {
         color: $black-color;
+        background-color: white;
 
         ~ .input-banner {
             background-image: url('/images/check.svg');
@@ -85,6 +91,7 @@
     }
 
     .not-valid {
+        color: $black-color;
         background-color: white;
 
         ~ .input-banner {

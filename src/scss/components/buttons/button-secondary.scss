@@ -2,25 +2,24 @@
     padding: 10px 20px 10px 20px;
     border-radius: 10px;
 
-    font-family: $main-font;
-    font-weight: 600;
-    font-size: 24px;
-
     background-color: white;
-    color: $black-color;
     border: 3px solid $black-color;
     box-shadow: $black-color 5px 5px 0px;
+
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 24px;
+    color: $black-color;
 
     @extend %interactive-transition;
 
     user-select: none;
-
     cursor: pointer;
 
     @media (hover: hover) {
         &:hover {
-            transform: scale(1.03);
             box-shadow: $black-color 6px 6px 0px;
+            transform: scale(1.03);
         }
     }
 

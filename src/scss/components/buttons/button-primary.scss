@@ -3,39 +3,37 @@
 
     padding: 10px 20px 10px 20px;
     border-radius: 10px;
-
-    font-family: $main-font;
-    font-weight: 600;
-    font-size: 24px;
-
-    background-color: $pink-color;
-    color: $black-color;
-
     border: 3px solid $black-color;
     box-shadow: $black-color 5px 5px 0px;
+    background-color: $pink-color;
+
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 24px;
+    color: $black-color;
 
     user-select: none;
+    cursor: pointer;
+
+    @extend %interactive-transition;
 
     &::before {
         content: '';
+
         position: absolute;
         left: -25px;
         top: -5px;
+        rotate: -20deg;
 
         width: 15px;
         height: 15px;
-
-        rotate: -20deg;
-
-        z-index: 2;
-
-        transform: scale(0);
 
         background-image: url('/images/heart-fill.svg');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
 
+        transform: scale(0);
         transition: 0.5s ease;
     }
 
@@ -44,25 +42,19 @@
         position: absolute;
         right: -27px;
         top: 45px;
+        rotate: 20deg;
 
         width: 15px;
         height: 15px;
-
-        rotate: 20deg;
-
-        transform: scale(0);
 
         background-image: url('/images/heart-fill.svg');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
 
+        transform: scale(0);
         transition: 0.5s ease;
     }
-
-    @extend %interactive-transition;
-
-    cursor: pointer;
 
     @media (hover: hover) {
         &:hover {

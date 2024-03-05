@@ -40,8 +40,8 @@ export const userProfile = async () => {
     profileItemsContainer.className = 'profile-items-container'
 
     const newLogOutItem = logOutItem
-    const newUidItem = uidItem
-    const newKeyItem = keyItem
+    const newUidItem = uidItem()
+    const newKeyItem = await keyItem()
     const newUnsubscribeUserItem = unsubscribeUserItem
     const newSubscribeItem = subscribeItem
     const newGetOutlineItem = getOutlineItem

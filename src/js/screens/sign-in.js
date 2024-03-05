@@ -2,7 +2,6 @@ import { signInButton } from '../components/buttons/sign-in-button.js'
 import { emailInputWrapper } from '../components/inputs/email-input.js'
 import { passwordInputWrapper } from '../components/inputs/password-input.js'
 import { createLinkButton } from '../components/buttons/link-button.js'
-import { resetPasswordButton } from '../components/buttons/reset-password-button.js'
 
 export const signIn = () => {
     const signInSection = document.createElement('section')
@@ -10,7 +9,7 @@ export const signIn = () => {
 
     const title = document.createElement('h2')
     title.className = 'title sign-in-title'
-    title.textContent = 'Войти'
+    title.textContent = 'Вход'
 
     const form = document.createElement('form')
     form.action = 'submit'
@@ -26,14 +25,14 @@ export const signIn = () => {
     const newSignInButton = signInButton
 
     // ----> LINK BUTTONS
-    const newLinkButton = createLinkButton('Зарегистрироваться', 'sign-up')
-    const newResetPasswordButton = resetPasswordButton()
+    const newRegisterLinkButton = createLinkButton('Зарегистрироваться', 'sign-up')
+    const newResetPasswordLinkButton = createLinkButton('Забыли пароль?', 'reset')
 
     // ----> BUTTONS WRAPPER
     const buttonsWrapper = document.createElement('div')
     buttonsWrapper.className = 'sign-buttons-wrapper'
 
-    buttonsWrapper.append(newSignInButton, newLinkButton, newResetPasswordButton)
+    buttonsWrapper.append(newSignInButton, newRegisterLinkButton, newResetPasswordLinkButton)
 
     form.append(newEmailInput, newPasswordInput, buttonsWrapper)
 

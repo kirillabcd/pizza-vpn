@@ -13,6 +13,8 @@
     justify-content: space-between;
     gap: 20px;
 
+    transition: 0.5s ease;
+
     cursor: pointer;
 
     overflow-wrap: break-word;
@@ -20,6 +22,12 @@
     .profile-item-content {
         word-wrap: unset;
         font-size: 12px;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            transform: scale(1.03);
+        }
     }
 }
 
@@ -61,7 +69,7 @@
 .get-outline-item {
     .profile-item-title {
         &::before {
-            background-image: url(/images/outline.svg);
+            background-image: url(/images/download.svg);
         }
     }
 }

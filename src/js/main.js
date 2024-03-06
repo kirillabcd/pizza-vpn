@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
     router()
 })
 
-window.addEventListener('load', () => {
+window.addEventListener('beforeunload', () => {
     router()
 })
 

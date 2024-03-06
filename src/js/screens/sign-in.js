@@ -25,8 +25,8 @@ export const signIn = () => {
     const newSignInButton = signInButton
 
     // ----> LINK BUTTONS
-    const newRegisterLinkButton = createLinkButton('Зарегистрироваться', 'sign-up')
-    const newResetPasswordLinkButton = createLinkButton('Забыли пароль?', 'reset')
+    const newRegisterLinkButton = createLinkButton('Нет аккаунта?', 'Зарегистрироваться', 'sign-up')
+    const newResetPasswordLinkButton = createLinkButton('Забыли пароль?', 'Сбросить', 'reset')
 
     // ----> BUTTONS WRAPPER
     const buttonsWrapper = document.createElement('div')

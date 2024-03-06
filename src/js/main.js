@@ -11,4 +11,8 @@ window.addEventListener('DOMContentLoaded', () => {
     router()
 })
 
+window.addEventListener('load', () => {
+    router()
+})
+
 handleAuthStatus()

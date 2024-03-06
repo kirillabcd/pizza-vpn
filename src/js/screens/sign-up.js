@@ -25,7 +25,7 @@ export const signUp = () => {
     const newSignUpButton = signUpButton
 
     // ----> LINK BUTTON
-    const newLinkButton = createLinkButton('Войти', 'sign-in')
+    const newLinkButton = createLinkButton('Уже есть аккаунт?', 'Войти', 'sign-in')
 
     // ----> BUTTONS WRAPPER
     const buttonsWrapper = document.createElement('div')

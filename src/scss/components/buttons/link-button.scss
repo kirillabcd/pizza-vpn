@@ -1,10 +1,17 @@
-.link-button {
+.link-button-container {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+
     font-family: $main-font;
-    text-decoration-line: underline;
-    text-decoration-style: dotted;
     color: $black-color;
+    font-size: 14px;
 
-    text-align: center;
+    .link-button {
+        text-decoration-line: underline;
+        text-decoration-style: dotted;
 
-    cursor: pointer;
+        cursor: pointer;
+    }
 }

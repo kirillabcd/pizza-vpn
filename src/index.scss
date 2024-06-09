@@ -1,0 +1,25 @@
+@import './assets/styles/fonts';
+@import './assets/styles/colors';
+
+:root {
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    // height: 100dvh;
+
+    font-family: $main-font, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: $font-color;
+    background-color: $body-color;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    box-sizing: border-box;
+}

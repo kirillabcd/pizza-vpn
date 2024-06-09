@@ -1,0 +1,81 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/fonts.scss';
+
+.button-primary {
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    border: 3px solid $border-color;
+    box-shadow: $shadow-color 5px 5px 0px;
+    background-color: $accent-color-primary;
+
+    font-family: $main-font;
+    font-weight: 800;
+    font-size: 24px;
+    color: $font-color;
+
+    user-select: none;
+    cursor: pointer;
+
+    transition: 0.5s ease-in-out;
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        left: -25px;
+        top: -5px;
+        rotate: -20deg;
+
+        width: 15px;
+        height: 15px;
+
+        background-image: url('/images/heart-fill.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        transform: scale(0);
+        transition: 0.5s ease;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: -27px;
+        top: 45px;
+        rotate: 20deg;
+
+        width: 15px;
+        height: 15px;
+
+        background-image: url('/images/heart-fill.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        transform: scale(0);
+        transition: 0.5s ease;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            transform: scale(1.03);
+            box-shadow: $shadow-color 6px 6px 0px;
+
+            @media screen and (min-width: 768px) {
+                &::before {
+                    transform: scale(1);
+                }
+
+                &:after {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+
+    &:active {
+        box-shadow: $shadow-color 3px 3px 0px;
+        transform: scale(1);
+    }
+}

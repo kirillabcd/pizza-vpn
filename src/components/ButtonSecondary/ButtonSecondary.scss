@@ -1,0 +1,32 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/fonts.scss';
+
+.button-secondary {
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    border: 3px solid $border-color;
+    box-shadow: $shadow-color 5px 5px 0px;
+    background-color: rgb(255, 255, 255);
+
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 24px;
+    color: $font-color;
+
+    user-select: none;
+    cursor: pointer;
+
+    transition: 0.5s ease-in-out;
+
+    @media (hover: hover) {
+        &:hover {
+            box-shadow: $shadow-color 6px 6px 0px;
+            transform: scale(1.03);
+        }
+    }
+
+    &:active {
+        box-shadow: $shadow-color 3px 3px 0px;
+        transform: scale(1);
+    }
+}

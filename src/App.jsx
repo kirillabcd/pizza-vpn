@@ -1,22 +1,31 @@
-import WelcomeContainer from './components/WelcomeContainer/WelcomeContainer'
-import WelcomePizza from './components/WelcomePizza/WelcomePizza'
-import ButtonsContainer from './components/ButtonsContainer/ButtonsContainer'
-import ButtonPrimary from './components/ButtonPrimary/ButtonPrimary'
-import ButtonSecondary from './components/ButtonSecondary/ButtonSecondary'
+/* eslint-disable no-unused-vars */
+import React, { useState } from 'react'
+
+import WelcomeView from './views/WelcomeView/WelcomeView'
+import SignUpView from './views/SignUpView/SignUpView'
+import SignInView from './views/SignInView/SignInView'
 
 function App() {
-    const primaryButtonText = 'Зарегистрироваться'
-    const secondaryButtonText = 'Войти'
+    const [currentView, setCurrentView] = useState('welcome')
+
+    function handleSignUpButton() {
+        setCurrentView('signUp')
+    }
+
+    function handleSignInButton() {
+        setCurrentView('signIn')
+    }
 
     return (
         <>
-            <WelcomeContainer>
-                <WelcomePizza></WelcomePizza>
-                <ButtonsContainer>
-                    <ButtonPrimary buttonText={primaryButtonText}></ButtonPrimary>
-                    <ButtonSecondary buttonText={secondaryButtonText}></ButtonSecondary>
-                </ButtonsContainer>
-            </WelcomeContainer>
+            {currentView === 'welcome' && (
+                <WelcomeView
+                    primaryButtonHandler={handleSignUpButton}
+                    secondaryButtonHandler={handleSignInButton}
+                />
+            )}
+            {currentView === 'signUp' && <SignUpView />}
+            {currentView === 'signIn' && <SignInView />}
         </>
     )
 }

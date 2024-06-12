@@ -40,14 +40,14 @@
             box-shadow: $shadow-color 3px 3px 0px;
 
             ~ label {
-                transform: translateY(-170%);
+                transform: translateY(-130%);
                 font-size: 18px;
             }
         }
 
         &:not(:placeholder-shown) {
             ~ label {
-                transform: translateY(-150%);
+                transform: translateY(-130%);
                 font-size: 18px;
             }
         }
